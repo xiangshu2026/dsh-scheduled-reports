@@ -1,0 +1,68 @@
+{
+  "_说明": "复制成 config.local.json 再改，或直接改本文件。留空的项走内置默认值。",
+  "lookback_days": 7,
+  "proxy": null,
+  "github": {
+    "enabled": true,
+    "token": "",
+    "min_stars": 0,
+    "fetch_readme_top": 20,
+    "max_candidates": 60,
+    "queries": [
+      "topic:dsh-plugin",
+      "dsh-plugin in:name,description",
+      "\"deepseek harness\" plugin in:name,description"
+    ]
+  },
+  "bilibili": {
+    "enabled": true,
+    "cookie": "",
+    "keywords": [
+      "deepseek 插件",
+      "dsh 插件",
+      "deepseek harness 插件",
+      "dsh-plugin"
+    ],
+    "min_views": 100,
+    "pages_per_keyword": 1,
+    "max_candidates": 60
+  },
+  "douyin": {
+    "enabled": false,
+    "cookie": "",
+    "keywords": [
+      "deepseek 插件",
+      "dsh 插件",
+      "deepseek harness"
+    ],
+    "count_per_keyword": 10,
+    "max_candidates": 40
+  },
+  "llm": {
+    "enabled": true,
+    "base_url": "https://api.deepseek.com",
+    "model": "deepseek-chat",
+    "api_key": "",
+    "batch_size": 8,
+    "max_candidates": 32,
+    "min_score": 5,
+    "temperature": 0.2,
+    "timeout": 120
+  },
+  "filter": {
+    "per_source_quota": 14
+  },
+  "report": {
+    "dir": "~/Desktop/DSH-Reports",
+    "dated_subfolder": true,
+    "docx": true,
+    "filename": "DSH插件周报",
+    "local_backup_dir": "reports",
+    "keep_latest_copy": true,
+    "title_prefix": "DSH 插件周报"
+  },
+  "state": {
+    "path": "_cache/state.json",
+    "resend_after_days": 30
+  }
+}
