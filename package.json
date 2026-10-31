@@ -1,0 +1,28 @@
+{
+  "name": "dsh-scheduled-reports",
+  "version": "1.0.0",
+  "description": "给 DeepSeek Harness 用的无人值守定时报告系统：每周自动生成电脑状况 / AI 模型动态 / 插件更新等报告，转 Word 存盘，支持开机补跑与日志追溯。",
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "automation",
+    "reporting",
+    "scheduler",
+    "windows",
+    "powershell"
+  ],
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiangshu2026/dsh-scheduled-reports.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xiangshu2026/dsh-scheduled-reports/issues"
+  },
+  "homepage": "https://github.com/xiangshu2026/dsh-scheduled-reports#readme",
+  "scripts": {
+    "run": "run-reports-now.cmd",
+    "sentinel": "run-sentinel.cmd"
+  }
+}

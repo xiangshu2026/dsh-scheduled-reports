@@ -1,3 +1,5 @@
+REM DSH Scheduled Reports - unattended report generation and archiving
+REM https://github.com/xiangshu2026/dsh-scheduled-reports
 @echo off
 setlocal
 

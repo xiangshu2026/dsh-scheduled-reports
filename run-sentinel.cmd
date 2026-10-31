@@ -1,3 +1,5 @@
+REM DSH Scheduled Reports - unattended report generation and archiving
+REM https://github.com/xiangshu2026/dsh-scheduled-reports
 @echo off
 REM DSH-Sentinel wrapper - ASCII only (cmd.exe parses batch by byte offset,
 REM so any non-ASCII here would corrupt the parsing of later lines).

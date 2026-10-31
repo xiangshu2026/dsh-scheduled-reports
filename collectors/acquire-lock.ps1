@@ -1,3 +1,5 @@
+# DSH 定时报告 · 无人值守报告生成与归档
+# https://github.com/xiangshu2026/dsh-scheduled-reports
 # ============================================================
 #  acquire-lock.ps1
 #

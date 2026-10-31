@@ -1,3 +1,5 @@
+# DSH 定时报告 · 无人值守报告生成与归档
+# https://github.com/xiangshu2026/dsh-scheduled-reports
 # get-api-key.ps1
 # Emit the DEEPSEEK_API_KEY ref from ~/.dsh/.credentials.yaml on stdout,
 # or nothing at all when the ref is absent. Never writes the key to a log.

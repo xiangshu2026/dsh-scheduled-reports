@@ -11,6 +11,9 @@
   输出格式是 KEY=VALUE 与分节，方便 agent 稳定解析。
 #>
 
+# DSH 定时报告 · 无人值守报告生成与归档
+# https://github.com/xiangshu2026/dsh-scheduled-reports
+
 param(
   [Parameter(Mandatory = $true)][string]$OutFile,
   [string]$ProfileDir = "$env:USERPROFILE\.dsh\profiles\desktop",

@@ -1,5 +1,13 @@
 # DSH 定时报告
 
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![DeepSeek Harness](https://img.shields.io/badge/DeepSeek%20Harness-plugin-purple)](https://github.com/xiangshu2026/dsh-scheduled-reports)
+[![Platform](https://img.shields.io/badge/platform-Windows-lightgrey)](#)
+[![Unattended](https://img.shields.io/badge/mode-unattended%20%2B%20catch--up-green)](#)
+
+> 原仓库：https://github.com/xiangshu2026/dsh-scheduled-reports
+> 如果你是从别处下载的，建议回原仓库获取最新版与 issue 支持。
+
 让 **DeepSeek Harness** 每周自动给你出几份报告，转成 Word 存到桌面。无人值守，
 开机自动补跑，日志可查。
 

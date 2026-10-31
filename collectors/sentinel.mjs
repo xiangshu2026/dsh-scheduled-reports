@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+// DSH 定时报告 · 无人值守报告生成与归档
+// https://github.com/xiangshu2026/dsh-scheduled-reports
 /**
  * sentinel.mjs —— 「退出码 0 但没干活」哨兵
  *
