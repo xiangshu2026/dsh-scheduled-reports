@@ -1,0 +1,12 @@
+# dsh-scheduled-reports bundle patch: inserts one host plugin row.
+# The plugin registers a `report_health` tool that checks whether scheduled
+# reports actually ran — by looking at side effects (file mtime, file count,
+# category variety), not at task exit codes. An exit code of 0 with nothing
+# produced is the failure mode this catches.
+- insert:
+    - id: dsh-scheduled-reports
+      name: 'dsh-scheduled-reports'
+      config:
+        enabled: true
+        # reportsDir / guardDir / logsDir default to the owner's home;
+        # override here or via SENT_REPORTS / SENT_GUARD / SENT_LOGS.

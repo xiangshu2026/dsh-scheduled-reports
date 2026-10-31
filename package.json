@@ -12,7 +12,6 @@
     "powershell"
   ],
   "license": "MIT",
-  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xiangshu2026/dsh-scheduled-reports.git"
@@ -24,5 +23,26 @@
   "scripts": {
     "run": "run-reports-now.cmd",
     "sentinel": "run-sentinel.cmd"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/",
+    "collectors/",
+    "tasks/",
+    "plugin-weekly/",
+    "run-*.cmd",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
   }
 }
