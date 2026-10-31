@@ -1,0 +1,75 @@
+{
+  "_说明": "复制成 config.json 再改。留空的项走内置默认值（见 dpw/config.py 的 DEFAULTS）。",
+
+  "lookback_days": 7,
+  "_proxy说明": "null=自动探测 127.0.0.1:7897/7890/10809；空串=强制直连；http://ip:port=显式",
+  "proxy": null,
+
+  "github": {
+    "enabled": true,
+    "token": "",
+    "min_stars": 0,
+    "fetch_readme_top": 20,
+    "max_candidates": 60,
+    "queries": [
+      "topic:dsh-plugin",
+      "dsh-plugin in:name,description",
+      "\"deepseek harness\" plugin in:name,description"
+    ]
+  },
+
+  "bilibili": {
+    "enabled": true,
+    "cookie": "",
+    "keywords": [
+      "deepseek 插件",
+      "dsh 插件",
+      "deepseek harness 插件",
+      "dsh-plugin"
+    ],
+    "min_views": 100,
+    "pages_per_keyword": 1,
+    "max_candidates": 60
+  },
+
+  "douyin": {
+    "enabled": false,
+    "_说明": "抖音搜索接口强制登录，不配 Cookie 就保持 false",
+    "cookie": "",
+    "keywords": ["deepseek 插件", "dsh 插件", "deepseek harness"],
+    "count_per_keyword": 10,
+    "max_candidates": 40
+  },
+
+  "llm": {
+    "enabled": true,
+    "base_url": "https://api.deepseek.com",
+    "model": "deepseek-chat",
+    "api_key": "",
+    "_api_key说明": "留空则依次读环境变量 DEEPSEEK_API_KEY、以及 DSH 的凭据文件（~/.dsh/.credentials.yaml）",
+    "batch_size": 8,
+    "max_candidates": 32,
+    "min_score": 5,
+    "temperature": 0.2,
+    "timeout": 120
+  },
+
+  "filter": {
+    "per_source_quota": 14
+  },
+
+  "report": {
+    "dir": "~/Desktop/DSH-Reports",
+    "dated_subfolder": true,
+    "docx": true,
+    "filename": "DSH插件周报",
+    "local_backup_dir": "reports",
+    "keep_latest_copy": true,
+    "title_prefix": "DSH 插件周报"
+  },
+
+  "state": {
+    "path": "_cache/state.json",
+    "resend_after_days": 30
+  }
+}
