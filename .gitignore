@@ -20,3 +20,7 @@ venv/
 .idea/
 .DS_Store
 Thumbs.db
+
+# 运行时状态（含本机插件版本快照，属设备信息）
+collectors/plugin-update-state.txt
+*.bak-*
