@@ -217,6 +217,41 @@ Register-ScheduledTask -TaskName "DSH-Sentinel" -Action $action -Trigger $trigge
 
 ---
 
+## DSH 工具：report_health
+
+作为 DSH 插件装进 profile 后，本仓库注册一个工具 **`report_health`**，把上面哨兵那套「看副作用」的检查直接交给模型调用。
+
+```js
+// 模型侧看到的形态
+report_health()                 // 用默认路径与阈值
+report_health({ reportsDir: 'D:\\Reports', maxReportDays: 14 })  // 覆盖个别参数
+```
+
+返回结构（与 `output.schema` 严格一致）：
+
+```json
+{
+  "worst": "ok",
+  "ok": true,
+  "items": [
+    { "item": "每日报告", "level": "ok", "ok": true, "detail": "最新 2026-11-02 · 5 份 · 1.6 小时前" },
+    { "item": "审计账本", "level": "ok", "ok": true, "detail": "登记 4471 行 · 最后同步 1.3 小时前" }
+  ]
+}
+```
+
+`worst` 三档：`ok` 全绿 / `warn` 有告警 / `error` 有严重项。
+
+**注册方式**：`ctx.tools.register({ name, description, parameters, output, execute })`。
+
+> ⚠️ 不要用 `ctx.tools.guard` 注册工具。`guard` 只接受一个 `ToolGuard` 函数
+> `(execution) => string | undefined`，用来做单调拒绝；传字符串会被 append 进 guard 层，
+> 每次工具调用执行 `guard(exec)` 时抛 TypeError，可能连累 profile 内所有工具调用。
+
+自测：`node test/selftest.mjs`（校验注册契约、schema 自洽、render 输出，5 条断言）。
+
+---
+
 ## 常见问题
 
 **Q：跑起来说 `MISSING_CREDENTIAL`？**

@@ -22,7 +22,8 @@
   "homepage": "https://github.com/xiangshu2026/dsh-scheduled-reports#readme",
   "scripts": {
     "run": "run-reports-now.cmd",
-    "sentinel": "run-sentinel.cmd"
+    "sentinel": "run-sentinel.cmd",
+    "test": "node test/selftest.mjs"
   },
   "type": "module",
   "main": "lib/index.js",
@@ -38,7 +39,8 @@
     "run-*.cmd",
     "cordis.patch.yml",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "test/"
   ],
   "dsh": {
     "bundle": {
